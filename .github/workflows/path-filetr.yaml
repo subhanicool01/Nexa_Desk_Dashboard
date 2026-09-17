@@ -1,21 +1,10 @@
-name: Path Filters
-on:
-    push:
-      paths:
-        - 'src/**' # Any file in src folder
-        - 'pom.xml' # pom.xml change
-        - 'Dockerfile' # docker file changed
-jobs: 
-    show-information:
-        name: Push Trigger info
-        runs-on: ubuntu-latest
-        steps:
-        - name: Show triggered information
-          run: |
-            echo "======================="
-            echo "Details of my workflow"
-            echo "Event Name is :       ${{ github.event_name }}"
-            echo "Reposiroty Name is:   ${{ github.repository }}"
-            echo "Branch  is :          ${{ github.ref_name }}"
-            echo "Actor is :            ${{ github.actor }}"
-            echo "Commit SHA is:        ${{ github.sha }}"
+
+name: First workflow                   # Name of the workflow (pipeline name in jenkins)
+on:                                    # when to run it - trigger/event
+  workflow_dispatch:                   # Runs when manaully triggerd
+jobs:       # what to do
+  first-job:
+     runs-on: ubuntu-latest
+     steps:
+     - name: print welcome message
+       run: echo "welcome to first workflow filter"  
