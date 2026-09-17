@@ -1,15 +1,16 @@
 
-name: path-filter                # Name of the workflow (pipeline name in jenkins)
-on:                                    # when to run it - trigger/event
-  workflow_dispatch:                   # Runs when manaully triggerd
-jobs:       # what to do
-  first-job:
-     runs-on: ubuntu-latest
-     steps:
-     - name: print welcome message
-       run: echo "welcome to first workflow filter"  
-  second-job:
-    runs-on: ubuntu-latest
-    steps:
-     - name: printing path filter
-       run: echo "printing path filter"     
+name: path filter workflow
+on: 
+    push:
+        branches:
+         - main
+        paths:
+        - 'src/**'
+        - 'pom.xml' 
+jobs:
+    path-filter:    
+      runs-on: ubuntu-latest
+      steps:
+      - name: push trigger info 
+        run: echo "this is path filter for push triggers"
+
