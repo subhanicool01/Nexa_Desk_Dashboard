@@ -1,0 +1,11 @@
+name: run workflow-1
+on: 
+    workflow_run:
+jobs:
+    workflow-1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: testing workflow-1
+          run: |
+            echo "sleeping for 30"            
+            sleep 30
