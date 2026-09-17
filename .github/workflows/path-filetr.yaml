@@ -1,15 +1,23 @@
-name: path filter workflow
-on: 
-   push:
-      branches:
-      - main
+name: Path Filters
+on:
+    push:
+      branches: 
+      - master
       paths:
-       - 'src/**'
-       - 'pom.xml'
-jobs:
-    cloning:
-          name: cloning job
-          runs-on: ubuntu-latest
-          steps:
-          - name: clone
-            run: echo "******* cloning the code on src/ ********"
+        - 'src/**' # Any file in src folder
+        - 'pom.xml' # pom.xml change
+        - Dockerfile # docker file changed
+jobs: 
+    show-information:
+        name: Push Trigger info
+        runs-on: ubuntu-latest
+        steps:
+        - name: Show triggered information
+          run: |
+            echo "======================="
+            echo "Details of my workflow"
+            echo "Event Name is :       ${{ github.event_name }}"
+            echo "Reposiroty Name is:   ${{ github.repository }}"
+            echo "Branch  is :          ${{ github.ref_name }}"
+            echo "Actor is :            ${{ github.actor }}"
+            echo "Commit SHA is:        ${{ github.sha }}"
