@@ -2,7 +2,7 @@ name: Path Filters
 on:
     push:
       branches: 
-      - master
+      - main
       paths:
         - 'src/**' # Any file in src folder
         - 'pom.xml' # pom.xml change
