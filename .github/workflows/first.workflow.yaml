@@ -1,0 +1,10 @@
+
+name: First workflow                   # Name of the workflow (pipeline name in jenkins)
+on:                                    # when to run it - trigger/event
+  workflow_dispatch:                   # Runs when manaully triggerd
+jobs:       # what to do
+  first-job:
+     runs-on: ubuntu-latest
+     steps:
+     - name: print welcome message
+       run: echo "welcome to first workflow"  
