@@ -2,8 +2,8 @@ name: path filter workflow
 on: 
    push:
       branches:
-         - main
-       paths:
+      - main
+      paths:
        - 'src/**'
        - 'pom.xml'
 jobs:
@@ -12,4 +12,4 @@ jobs:
           runs-on: ubuntu-latest
           steps:
           - name: clone
-            run: echo "******* cloning the code on src ********"
+            run: echo "******* cloning the code on src/ ********"
