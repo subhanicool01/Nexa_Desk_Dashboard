@@ -1,4 +1,4 @@
-name: run workflow-1
+name: run-workflow-1
 on: 
     workflow_dispatch:
 jobs:
