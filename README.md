@@ -4,4 +4,6 @@
 # some commitfd
 
 * Implemented some java depenedencies fixes
-* new fix 
+* new fix
+
+* We implemented the pull request workflow
