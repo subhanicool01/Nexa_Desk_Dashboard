@@ -1,5 +1,5 @@
 
-name: First workflow                   # Name of the workflow (pipeline name in jenkins)
+name: path-filter                # Name of the workflow (pipeline name in jenkins)
 on:                                    # when to run it - trigger/event
   workflow_dispatch:                   # Runs when manaully triggerd
 jobs:       # what to do
