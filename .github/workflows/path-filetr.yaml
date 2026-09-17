@@ -1,0 +1,15 @@
+name: path filter workflow
+on: 
+   push:
+      branches:
+         - main
+       paths:
+       - 'src/**'
+       - 'pom.xml'
+jobs:
+    cloning:
+          name: cloning job
+          runs-on: ubuntu-latest
+          steps:
+          - name: clone
+            run: echo "******* cloning the code*******"         
