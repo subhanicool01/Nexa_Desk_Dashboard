@@ -1,0 +1,12 @@
+name: Pull Request Event
+on: 
+    pull_request:
+jobs:
+    Show-info:
+       name: Push trigger info
+       runs-on: ubuntu-latest
+       steps:
+        - name: Show triggerd info
+          run: |
+            echo "Source branch ${{ github.head_ref }}"
+            echo "Target branch ${{ github.base_ref }}"
