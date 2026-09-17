@@ -12,4 +12,4 @@ jobs:
           runs-on: ubuntu-latest
           steps:
           - name: clone
-            run: echo "******* cloning the code*******"         
+            run: echo "******* cloning the code on src ********"
