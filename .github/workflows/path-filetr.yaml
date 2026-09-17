@@ -1,10 +1,10 @@
 name: Path Filters
 on:
-      workflow_dispatch:
+    push:
       paths:
         - 'src/**' # Any file in src folder
         - 'pom.xml' # pom.xml change
-        - Dockerfile # docker file changed
+        - 'Dockerfile' # docker file changed
 jobs: 
     show-information:
         name: Push Trigger info
