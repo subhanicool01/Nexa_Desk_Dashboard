@@ -1,7 +1,5 @@
 * this is a readme file for the java app.
 * Added some code here in readme 
 
-# some commitfd
+# Info about Nexa_Desk_Dashboard
 
-* Implemented some java depenedencies fixes
-* new fix 
