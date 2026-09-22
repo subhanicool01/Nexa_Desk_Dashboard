@@ -1,6 +1,6 @@
 name: without-actions
 on: 
-    workflow_dispatch:
+     workflow_dispatch:
 jobs:
     manual-setup:
        runs-on: ubuntu-latest
@@ -13,4 +13,8 @@ jobs:
             ls -la
             echo "**************************************************"
             echo "print the working directory"
-            pwd  
+            pwd 
+
+         - name: installing java
+           run: manually added all the steps
+        
