@@ -1,0 +1,16 @@
+name: without-actions
+on: 
+    workflow_dispatch:
+jobs:
+    manual-setup:
+       runs-on: ubuntu-latest
+       steps:
+         - name: cloning manullay
+           run: |
+            echo " Cloning the repository manully"
+            git clone https://github.com/${{ github.repository}}.git .
+            echo "List of files in the repo after cloning"
+            ls -la
+            echo "**************************************************"
+            echo "print the working directory"
+            pwd  
