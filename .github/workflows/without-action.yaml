@@ -16,5 +16,5 @@ jobs:
             pwd 
 
          - name: installing java
-           run: manually added all the steps
+           run: manually added all the steps(too many steps)
         
